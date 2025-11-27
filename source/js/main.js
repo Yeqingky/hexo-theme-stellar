@@ -214,7 +214,7 @@ const init = {
         notice.innerHTML = `
         <div class="close-btn" onclick="this.parentElement.remove()">×</div>
         <a href="${originalURL}" target="_self" rel="noopener noreferrer">
-        本站为官方备用站，仅供应急。主站：${originalURL}
+        本站点为备用站.<br>主站：${originalURL}
         </a>
         `;
       } else {
@@ -222,7 +222,7 @@ const init = {
         notice.innerHTML = `
         <a href="${originalURL}" target="_self" rel="noopener noreferrer">
         <div class="headline icon">☠️</div>
-        本站为非法克隆站，请前往官方源站访问。<br>
+        本站为非法克隆站 请前往官方站点访问。<br>
         源站：${originalURL}
         </a>
         `;
