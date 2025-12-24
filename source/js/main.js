@@ -210,12 +210,12 @@ const init = {
       const notice = document.createElement('div');
       const originalURL = `https://${canonical.originalHost}`;
       if (isOfficial) {
-        notice.className = 'canonical-tip official';
-        notice.innerHTML = `
-        <a href="${originalURL}" target="_self" rel="noopener noreferrer">
-        本站为官方备用站，仅供应急。主站：${originalURL}
-        </a>
-        `;
+        // notice.className = 'canonical-tip official';
+        // notice.innerHTML = `
+        // <a href="${originalURL}" target="_self" rel="noopener noreferrer">
+        // 本站为官方备用站，仅供应急。主站：${originalURL}
+        // </a>
+        // `;
       } else {
         notice.className = 'canonical-tip unofficial';
         notice.innerHTML = `
