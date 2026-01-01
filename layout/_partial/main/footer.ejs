@@ -38,9 +38,7 @@ function layoutDiv() {
   if (content) {
     el += markdown(content)
   }
-  el += '<span class="totalcount">共 ' + site.posts.length + ' 篇文章 </span><span class="post-count">总计 ' + totalcount(site) + ' 字</span> 总访问量 <span id="busuanzi_site_pv"></span> 次 总访客数 <span id="busuanzi_site_uv"></span> 人'
-  el += '<br><br>'
-  el += '<a href="https://icp.gov.moe/?keyword=20259010" target="_blank">萌ICP备20259010号</a>'
+  el += '<span class="totalcount">已发布 ' + site.posts.length + ' 篇文章，</span><span class="post-count">总计 ' + totalcount(site) + ' 字。</span>'
   el += '</div></footer>'
   return el
 }
