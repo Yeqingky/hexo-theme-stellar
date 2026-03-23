@@ -38,7 +38,8 @@ function layoutDiv() {
   if (content) {
     el += markdown(content)
   }
-  el += '<span class="totalcount">已发布 ' + site.posts.length + ' 篇文章，</span><span class="post-count">总计 ' + totalcount(site) + ' 字。</span>'
+  el += '<span class="totalcount">已发布 ' + site.posts.length + ' 篇文章，</span><span class="post-count">总计 ' + totalcount(site) + ' 字。</span><br><br>'
+  el += '<span class="totalcount"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">鄂ICP备2026013078号-1</a></span>'
   el += '</div></footer>'
   return el
 }
