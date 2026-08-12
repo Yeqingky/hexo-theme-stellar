@@ -34,9 +34,9 @@ hexo.on('ready', () => {
 \x1b[32mREPO\x1b[0m  ${repository.url}`);
   hexo.log.info(line);
   console.log(``);
-  // version check
-  const checkVersion = require('./lib/version-check');
-  checkVersion(hexo, { useCache: true });
+  // version check (fork 独立维护, 已禁用: 不跟随上游 npm 版本, 避免无意义警告与 npm registry 请求)
+  // const checkVersion = require('./lib/version-check');
+  // checkVersion(hexo, { useCache: true });
 });
 
 
