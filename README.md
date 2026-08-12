@@ -1,5 +1,7 @@
 # Stellar - 每个人的独立博客
 
+本仓库 fork 自 [xaoxuu/hexo-theme-stellar](https://github.com/xaoxuu/hexo-theme-stellar).
+
 Stellar 是一个极为强大的综合型 Hexo 主题，包含博客系统、知识库系统、专栏系统、笔记系统，内置海量的标签和动态数据组件。
 
 ## 亮点
