@@ -23,10 +23,28 @@
     padding: 4px
 
   div#post-meta
+    margin-top: 4px
     span.sep:before
       content: '|'
     span.updated
       visibility: visible
+
+  div#post-tags
+    flex-wrap: wrap
+    gap: 4px
+    margin-top: 4px
+    a.tag
+      display: inline-block
+      padding: 2px 8px
+      font-size: $fs-13
+      color: var(--text-banner)
+      background: var(--button-hover-bg)
+      border-radius: 4px
+      opacity: 0.85
+      &:hover
+        opacity: 1
+        background: var(--button-hover-bg)
+        text-decoration: underline
 
 .bread-nav .ghrepo
   font-size: $fs-13

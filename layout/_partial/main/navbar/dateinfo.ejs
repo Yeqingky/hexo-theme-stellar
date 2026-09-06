@@ -39,6 +39,15 @@ function layoutDiv() {
     el += `</span>`
   }
   el += `</div>`
+  // 标签
+  if (page.tags && page.tags.length > 0) {
+    el += `<div class="flex-row" id="post-tags">`
+    el += `<span class="text">标签:</span>`
+    page.tags.forEach((tag) => {
+      el += `<a class="tag" href="${pretty_url(tag.path)}">${tag.name}</a>`
+    })
+    el += `</div>`
+  }
   return el
 }
 %>
