@@ -35,6 +35,10 @@
       width: "calc(100% - 2 * %s)" % @margin
       height: "calc(100% - 2 * %s)" % @margin
       border-radius: @width
+      transition: transform 0.6s ease
+    &:hover
+      img.avatar
+        transform: rotate(360deg)
     if hexo-config('style.animated_avatar.animate')
       div.bg
         trans1: opacity
