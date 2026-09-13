@@ -34,8 +34,18 @@ if (cmt.service && page[cmt.service]) {
   Object.assign(cmt[cmt.service], page[cmt.service]);
 }
 page.cmt = cmt;
+// 构建环境变量 deploy 命中 theme.comments.deploy_notice.env 时，用提示块替换原生评论区
+// 仅在原本会渲染评论区的页面上生效，故意关闭评论的页面（front-matter comments: false）不受影响
+var dnotice = deploy_notice();
 %>
-<% if (loadComment) { %>
+<% if (loadComment && dnotice.active) { %>
+  <div class="article-footer<%- scrollreveal(' ') %>" id="comments">
+    <section id="comment-notice">
+      <div class="header"><span><%- dnotice.title %></span></div>
+      <div class="body"><%- markdown(dnotice.content) %></div>
+    </section>
+  </div>
+<% } else if (loadComment) { %>
   <div class="related-wrap md-text<%- scrollreveal(' ') %>" id="comments">
     <section class='header cmt-title cap theme'>
       <%- markdown(page.comment_title || theme.comments.comment_title) %>
